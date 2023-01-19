@@ -7,3 +7,4 @@ class User(AbstractUser):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     profile_image = models.CharField(max_length=300)
+    #todo populate their stuff
