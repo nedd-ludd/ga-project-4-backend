@@ -11,6 +11,7 @@ from .serializers import ItemSerializer, PopulatedItemSerializer
 # from ..helpers import is_owner
 
 class ItemListView(APIView):
+    
     permission_classes = (IsAuthenticatedOrReadOnly, )
     def get(self, _request):
         items = Item.objects.all() 
@@ -19,7 +20,6 @@ class ItemListView(APIView):
 
     def post(self, request):
         request.data['owner'] = request.user.id
-        #!the person adding goes down in the data
         item_to_add = ItemSerializer(data=request.data)
         try:
             item_to_add.is_valid()
@@ -52,7 +52,7 @@ class ItemDetailView(APIView):
         return Response(serialized_item.data, status=status.HTTP_200_OK)
 
     def put(self, request, pk):
-        # ! need to check is owner here
+        request.data['owner'] = request.user.id
         item_to_edit = self.get_item(pk=pk)
         updated_item = ItemSerializer(item_to_edit, data=request.data)
         try:
@@ -60,6 +60,7 @@ class ItemDetailView(APIView):
             updated_item.save()
             return Response(updated_item.data, status=status.HTTP_202_ACCEPTED)
         except AssertionError as e:
+            print("here")
             return Response({"detail": str(e)}, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
         except:
             return Response({"detail": "Unprocessible Entity"}, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
@@ -74,4 +75,21 @@ class ItemDetailView(APIView):
           return Response({"detail": "You do not have permission to perform that action"}, status=status.HTTP_401_UNAUTHORIZED)
         item_to_delete.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+class ItemSearchView(APIView):
+  def get(self, request):
+    search_query = request.GET.get("search")
+    print("searching for", search_query)
+    results = Item.objects.filter(name__icontains=search_query)
+    serialized_results = ItemSerializer(results, many=True)
+    return Response(serialized_results.data)
+
+class ItemPullUserView(APIView):
+  def get(self, request):
+
+    search_query = request.GET.get("search")
+    print("gettin items from user", search_query)
+    results = Item.objects.filter(owner=search_query)
+    serialized_results = ItemSerializer(results, many=True)
+    return Response(serialized_results.data)
 

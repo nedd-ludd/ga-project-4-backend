@@ -6,7 +6,7 @@ class Item(models.Model):
     image = models.CharField(max_length=300)  # could be url
     categories = models.ManyToManyField('categories.Category', related_name="items")
     owner = models.ForeignKey(
-        'jwt_auth.User', related_name='albums', on_delete=models.CASCADE)
+        'jwt_auth.User', related_name='items', on_delete=models.CASCADE)
 
     available =  models.BooleanField(default=True)
 
