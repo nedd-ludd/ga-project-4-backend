@@ -21,5 +21,6 @@ urlpatterns = [
     path('api/auth/', include('jwt_auth.auth-urls')),
     path('api/items/', include('items.urls')),
     path('api/categories/', include('categories.urls')),
-    path('api/users/', include('jwt_auth.user-urls'))
+    path('api/users/', include('jwt_auth.user-urls')),
+    path('api/friendships/', include('friendships.urls'))
 ]

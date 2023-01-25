@@ -1,7 +1,7 @@
 from django.db import models
 
 class Item(models.Model):
-    name = models.CharField(max_length=50)  # kwarg
+    name = models.IntegerField() # kwarg
     description = models.TextField(max_length=1000)
     image = models.CharField(max_length=300)  # could be url
     categories = models.ManyToManyField('categories.Category', related_name="items")

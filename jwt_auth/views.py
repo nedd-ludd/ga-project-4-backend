@@ -18,6 +18,7 @@ User = get_user_model()
 
 class RegisterView(APIView):
     def post(self, request):
+        print("here")
         user_to_create = UserSerializer(data=request.data)
         print(request.data)
         if user_to_create.is_valid():

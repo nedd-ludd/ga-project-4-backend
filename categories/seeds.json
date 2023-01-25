@@ -1,0 +1,128 @@
+[
+{
+  "model": "categories.category",
+  "pk": 4,
+  "fields": {
+    "name": "Home"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 5,
+  "fields": {
+    "name": "Clothes"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 6,
+  "fields": {
+    "name": "Electronics"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 7,
+  "fields": {
+    "name": "Sports"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 8,
+  "fields": {
+    "name": "Hobbies"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 9,
+  "fields": {
+    "name": "Entertainment"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 10,
+  "fields": {
+    "name": "Leisure"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 11,
+  "fields": {
+    "name": "Games"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 12,
+  "fields": {
+    "name": "Business"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 13,
+  "fields": {
+    "name": "Office"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 14,
+  "fields": {
+    "name": "Transport"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 15,
+  "fields": {
+    "name": "Garden"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 16,
+  "fields": {
+    "name": "Tools"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 17,
+  "fields": {
+    "name": "Gym"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 18,
+  "fields": {
+    "name": "Beauty"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 19,
+  "fields": {
+    "name": "Music"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 20,
+  "fields": {
+    "name": "Media"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 21,
+  "fields": {
+    "name": "Misc"
+  }
+}
+]

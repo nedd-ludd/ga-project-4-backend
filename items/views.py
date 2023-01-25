@@ -19,6 +19,7 @@ class ItemListView(APIView):
         return Response(serialized_items.data, status=status.HTTP_200_OK)
 
     def post(self, request):
+        print(request.data)
         request.data['owner'] = request.user.id
         item_to_add = ItemSerializer(data=request.data)
         try:
