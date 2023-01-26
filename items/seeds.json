@@ -1,0 +1,100 @@
+[
+{
+  "model": "items.item",
+  "pk": 2,
+  "fields": {
+    "name": "Set of Golf Clubs",
+    "description": "A few years old but great for someone just trying the sport out. I tend to play on weekdays so can borrow on weekends.",
+    "image": "ahkfqe4stvjd1zujwjgq",
+    "owner": 2,
+    "available": true,
+    "categories": [
+      7
+    ]
+  }
+},
+{
+  "model": "items.item",
+  "pk": 3,
+  "fields": {
+    "name": "Tennis Rackets",
+    "description": "Two tennis rackets, wilson.",
+    "image": "luxwzk1swm5n9uitdip3",
+    "owner": 2,
+    "available": true,
+    "categories": [
+      7
+    ]
+  }
+},
+{
+  "model": "items.item",
+  "pk": 4,
+  "fields": {
+    "name": "A1 Guillotine",
+    "description": "Can either be borrowed or used in garden office.",
+    "image": "ndqqv8mxhdsjalg01amu",
+    "owner": 2,
+    "available": true,
+    "categories": [
+      8
+    ]
+  }
+},
+{
+  "model": "items.item",
+  "pk": 5,
+  "fields": {
+    "name": "Bell tent",
+    "description": "6 man bell tent, a bit tent but still watertight",
+    "image": "uugaxp9bhpp4ejyxln5n",
+    "owner": 2,
+    "available": true,
+    "categories": [
+      10
+    ]
+  }
+},
+{
+  "model": "items.item",
+  "pk": 6,
+  "fields": {
+    "name": "Circular saw",
+    "description": "Titan circular saw, if using for a big job would ask that you buy a new blade, thanks.",
+    "image": "a55wksj11pw92qxsxwwz",
+    "owner": 2,
+    "available": true,
+    "categories": [
+      16
+    ]
+  }
+},
+{
+  "model": "items.item",
+  "pk": 7,
+  "fields": {
+    "name": "React.js book",
+    "description": "Great for learning",
+    "image": "d6yf3k3axzytdf9b6krx",
+    "owner": 2,
+    "available": true,
+    "categories": [
+      21
+    ]
+  }
+},
+{
+  "model": "items.item",
+  "pk": 8,
+  "fields": {
+    "name": "Something weird",
+    "description": "not sure what to do with it",
+    "image": "whtqwdgmqtwyo19xbxcd",
+    "owner": 2,
+    "available": true,
+    "categories": [
+      21
+    ]
+  }
+}
+]
